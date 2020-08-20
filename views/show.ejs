@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线相册</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <style>
+        body{padding: 0 5%;}
+        h1{color: lightblue;text-align: center;text-decoration: underline;}
+        .allDir{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .dir{
+            width: 30%;text-align: center;
+        }
+        .dir img{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>在线相册</h1>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">相册</a>
+          </div>
+      
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/dir/mkdir">新建相册</a></li>
+              <li><a href="/pic/upload">上传图片</a></li>
+              <li class="dropdown">
+                
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+                     
+          </div>
+        </div>
+    </nav>
+    <div class="allDir">
+        <% for(var i=0;i<pics.length;i++){ %>
+        <div class="dir">
+            <img src="/<%= dir %>/<%= pics[i] %>">
+        </div> 
+        <% } %>
+    </div>
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</body>
+</html>

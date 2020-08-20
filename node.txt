@@ -18,12 +18,13 @@ cnpm init -y 生成package.json配置文件
   cnpm i rimraf --save
 
 2. 搭建项目结构
-  node_modules/     存放所依赖的模板
-  public/           存放静态资源文件
+  node_modules/     存放所依赖的模块
+  public/           存放静态资源文件(固定的文件,css,js)
   uploads/          存放上传图片
   views/            存放ejs视图模板文件
   route/            存放路由文件
   model/            存放file操作的文件
+  temp/             临时保存上传图片
   app.js            服务器启动文件
 
 
